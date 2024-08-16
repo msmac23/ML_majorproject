@@ -41,7 +41,7 @@ with st.sidebar:
                         'new york city',	'north jersey',	'oklahoma city',	'orange county',	'orlando',	'others',
                         'phoenix',	'pittsburgh',	'portland',	'raleigh / durham / CH',	'reno / tahoe',	'rochester',	
                         'sacramento',	'san diego',	'seattle-tacoma',	'SF bay area',	'south florida',	'south jersey',
-                        'spokane / coeur d'alene',	'st louis, MO',	'stockton',	'tampa bay area',	'tucson',	'washington, DC'))
+                        'spokane / coeur d'alene',	'st louis, MO',	'stockton',	'tampa bay area',	'tucson', 'washington, DC'))
 
 
 
