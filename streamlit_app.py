@@ -63,7 +63,8 @@ with st.sidebar:
     'Select a Year',
     min_value=min_year,
     max_value=max_year,
-    value=(min_year, max_year)  # Default value as a range
+    value=(min(years), max(years)),  # Default range selection
+    step=1
   )
 
   # Display the selected year
