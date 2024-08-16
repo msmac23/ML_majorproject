@@ -34,15 +34,24 @@ with st.sidebar:
   st.header('Input Features')
   # region,price,year,manufacturer,model,condition,cylinders,fuel,odometer,title_status,
   #transmission,type,paint_color,drive_4wd,drive_fwd,drive_rwd,geo_location
-  region = st.selectbox('region',('atlanta',	'austin',	'baltimore',	'boston',	'central NJ',	'charlotte', 'chicago',	'cincinnati',	
-                        'colorado springs',	'columbus',	'dallas / fort worth',	'denver',	'des moines',	'detroit metro',
-                        'ft myers / SW florida',	'grand rapids',	'houston',	'inland empire',	'jacksonville',	'kansas city',
-                        'las vegas',	'long island',	'los angeles',	'milwaukee',	'minneapolis / st paul',	'nashville',
-                        'new york city',	'north jersey',	'oklahoma city',	'orange county',	'orlando',	'others',
-                        'phoenix',	'pittsburgh',	'portland',	'raleigh / durham / CH',	'reno / tahoe',	'rochester',	
-                        'sacramento',	'san diego',	'seattle-tacoma',	'SF bay area',	'south florida',	'south jersey',
-                        'spokane / coeur d'alene',	'st louis, MO',	'stockton',	'tampa bay area',	'tucson', 'washington, DC'))
+ 
 
+      # Define the regions for the selectbox
+regions = (
+    'atlanta', 'austin', 'baltimore', 'boston', 'central NJ', 'charlotte',
+    'chicago', 'cincinnati', 'colorado springs', 'columbus', 'dallas / fort worth',
+    'denver', 'des moines', 'detroit metro', 'ft myers / SW florida', 'grand rapids',
+    'houston', 'inland empire', 'jacksonville', 'kansas city', 'las vegas',
+    'long island', 'los angeles', 'milwaukee', 'minneapolis / st paul', 'nashville',
+    'new york city', 'north jersey', 'oklahoma city', 'orange county', 'orlando',
+    'others', 'phoenix', 'pittsburgh', 'portland', 'raleigh / durham / CH',
+    'reno / tahoe', 'rochester', 'sacramento', 'san diego', 'seattle-tacoma',
+    'SF bay area', 'south florida', 'south jersey', 'spokane / coeur d\'alene',
+    'st louis, MO', 'stockton', 'tampa bay area', 'tucson', 'washington, DC'
+)
+
+# Create a selectbox for region selection
+region = st.selectbox('Region', regions)
 
 
 
