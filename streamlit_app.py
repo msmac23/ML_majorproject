@@ -34,10 +34,8 @@ with st.sidebar:
   st.header('Input Features')
   # region,price,year,manufacturer,model,condition,cylinders,fuel,odometer,title_status,
   #transmission,type,paint_color,drive_4wd,drive_fwd,drive_rwd,geo_location
- 
-
-      # Define the regions for the selectbox
-regions = (
+       # Define the regions for the selectbox
+  regions = (
     'atlanta', 'austin', 'baltimore', 'boston', 'central NJ', 'charlotte',
     'chicago', 'cincinnati', 'colorado springs', 'columbus', 'dallas / fort worth',
     'denver', 'des moines', 'detroit metro', 'ft myers / SW florida', 'grand rapids',
@@ -48,10 +46,10 @@ regions = (
     'reno / tahoe', 'rochester', 'sacramento', 'san diego', 'seattle-tacoma',
     'SF bay area', 'south florida', 'south jersey', 'spokane / coeur d\'alene',
     'st louis, MO', 'stockton', 'tampa bay area', 'tucson', 'washington, DC'
-)
+  )
 
-# Create a selectbox for region selection
-region = st.selectbox('Region', regions)
+  # Create a selectbox for region selection
+  region = st.selectbox('Region', regions)
 
 
 
