@@ -20,7 +20,9 @@ with st.expander('Data'):
   y = vehicles_df.price
   y
 
-
+# region,price,year,manufacturer,model,condition,cylinders,fuel,odometer,title_status,transmission,type,paint_color
+with st.expander('Data Visualization'):
+  st.scatter_chart(data=vehicles_df, x='manufacturer', y='condition', color='fuel') 
 
 
 
