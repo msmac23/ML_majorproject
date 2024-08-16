@@ -23,6 +23,7 @@ with st.expander('Data'):
 # region,price,year,manufacturer,model,condition,cylinders,fuel,odometer,title_status,transmission,type,paint_color
 with st.expander('Data Visualization'):
   st.scatter_chart(data=vehicles_df, x='manufacturer', y='condition', color='fuel') 
+  st.scatter_chart(data=vehicles_df, x='condition', y='type', color='transmission')
 
 
 
