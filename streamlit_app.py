@@ -25,7 +25,7 @@ with st.expander('Data Visualization'):
   st.scatter_chart(data=vehicles_df, x='manufacturer', y='condition', color='fuel') 
   st.scatter_chart(data=vehicles_df, x='condition', y='type', color='transmission')
   
-  st.bar_chart(data=vehicles_df, *, x='type', y='cylinders', x_label= 'Type', y_label='Cylinders', color='type',
+  st.bar_chart(data=vehicles_df, x='type', y='cylinders', x_label= 'Type', y_label='Cylinders', color='type',
                horizontal=False, stack=None, width=None, height=None, use_container_width=True)
 
 
