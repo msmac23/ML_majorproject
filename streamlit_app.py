@@ -54,7 +54,9 @@ with st.sidebar:
   # Creating sliders and selectbox for each variable
   region = st.selectbox('Region', regions)
   year = st.slider('Year of Car', 1910, 2022, 1981) 
-  manufacturer = st.selectbox('Manufacturer', ('acura',	'audi', 'bmw',	'cadillac',	'chevrolet',	'chrysler',	'dodge',	'ford',	'gmc',	'honda',	'hyundai',	'jeep',	'kia',	'lexus',	'mercedes-benz',	'nissan',	'others',	'ram',	'subaru',	'toyota',	'volkswagen'
+  manufacturer = st.selectbox('Manufacturer', ('acura',	'audi', 'bmw',	'cadillac',	'chevrolet',	'chrysler',	'dodge',	
+                                               'ford',	'gmc',	'honda',	'hyundai',	'jeep',	'kia',	'lexus',	'mercedes-benz',	
+                                               'nissan',	'others',	'ram',	'subaru',	'toyota',	'volkswagen'
 ))
 
 
