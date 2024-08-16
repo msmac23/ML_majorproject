@@ -12,11 +12,11 @@ with st.expander('Data'):
   vehicles_df = pd.read_csv('https://raw.githubusercontent.com/msmac23/ML_majorproject/master/sample_vehicles_data.csv')
   vehicles_df
 
-  st.write('**X**')
+  st.write('**X**')    # target variable
   X = vehicles_df.drop('price', axis =1)
   X
 
-  st.write('**y**')
+  st.write('**y**')   # predictor variables
   y = vehicles_df.price
   y
 
