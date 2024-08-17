@@ -61,7 +61,7 @@ with st.sidebar:
 ))
 
 # Filter car models based on the selected manufacturer
-filtered_models = vehicles_df[vehicles_df['manufacturer'] == manufacturer]['car_model'].tolist()
+filtered_models = vehicles_df[vehicles_df['manufacturer'] == manufacturer]['model'].tolist()
 model = st.selectbox('Models', filtered_models)
 
 
