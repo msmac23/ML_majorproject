@@ -58,11 +58,11 @@ with st.sidebar:
   manufacturer = st.selectbox('Manufacturer', ('acura',	'audi', 'bmw',	'cadillac',	'chevrolet',	'chrysler',	'dodge',	
                                                'ford',	'gmc',	'honda',	'hyundai',	'jeep',	'kia',	'lexus',	'mercedes-benz',	
                                                'nissan',	'others',	'ram',	'subaru',	'toyota',	'volkswagen'
-))
-
-# Filter car models based on the selected manufacturer
-filtered_models = vehicles_df[vehicles_df['manufacturer'] == manufacturer]['model'].tolist()
-model = st.selectbox('Models', filtered_models)
+  ))
+  
+  # Filter car models based on the selected manufacturer
+  filtered_models = vehicles_df[vehicles_df['manufacturer'] == manufacturer]['model'].tolist()
+  model = st.selectbox('Models', filtered_models)
 
 
 
