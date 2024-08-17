@@ -62,7 +62,7 @@ with st.sidebar:
   # Filter car models based on the selected manufacturer
   filtered_models = vehicles_df[vehicles_df['manufacturer'] == manufacturer]['model'].tolist()
   model = st.selectbox('Models', filtered_models)
-  # island = st.selectbox('Island', ('Biscoe', 'Dream', 'Torgersen'))
+  
   condition = st.selectbox('Condition', ('excellent', 'fair',	'good',	'like new',	'new',	'salvage'))
   cylinders = st.slider('Cylinder', 0, 12, 6) 
   fuel = st.selectbox('Fuel Type', ('diesel',	'electric',	'gas',	'hybrid',	'other'))
@@ -72,9 +72,28 @@ with st.sidebar:
                                        'other',	'pickup',	'sedan',	'SUV',	'truck',	'van',	'wagon'))
   odometer_bins = st.selectbox('Odometer', ('0-20k',	'50k-100k', '100k-150k',	'150k-200k',	'200k-300k',	
                                             '20k-50k',	'300k-400k',	'400k-500k',	'500k+'))
+
+  # Creating a DataFrame for the input features
+  data = {'region': region,
+          'year': year,
+          'manufacturer': manufacturer,
+          'model': model,
+          'condition': condition,
+          'cylinders': cylinders,
+          'fuel': fuel,
+          'transmission': transmission,
+          'drive': drive,
+          'type': type,
+          'odometer_bins': odometer_bins}
+          
+  input_df = pd.DataFrame(data, index=[0])
+  input_vehicles = pd.concat([input_df, X], axis=0)
+
+input_vehicles
+
  
 
-  
+  # region,price,year,manufacturer,model,condition,cylinders,fuel,transmission,drive,type,odometer_bins
 
 
 
