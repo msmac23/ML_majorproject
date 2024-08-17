@@ -33,9 +33,8 @@ with st.expander('Data Visualization'):
 # User Input
 with st.sidebar:
   st.header('Input Features')
-  # region,price,year,manufacturer,model,condition,cylinders,fuel,odometer,title_status,
-  #transmission,type,paint_color,drive_4wd,drive_fwd,drive_rwd,geo_location
-       # Define the regions for the selectbox
+  # region,price,year,manufacturer,model,condition,cylinders,fuel,transmission,drive,type,odometer_bins
+  # Define the regions for the selectbox
   regions = (
     'atlanta', 'austin', 'baltimore', 'boston', 'central NJ', 'charlotte',
     'chicago', 'cincinnati', 'colorado springs', 'columbus', 'dallas / fort worth',
@@ -63,6 +62,13 @@ with st.sidebar:
   # Filter car models based on the selected manufacturer
   filtered_models = vehicles_df[vehicles_df['manufacturer'] == manufacturer]['model'].tolist()
   model = st.selectbox('Models', filtered_models)
+  # island = st.selectbox('Island', ('Biscoe', 'Dream', 'Torgersen'))
+  condition = st.selectbox('Condition', ('excellent', 'fair',	'good',	'like new',	'new',	'salvage'))
+  cylinders = st.slider('Cylinder', 0, 12, 6) 
+  
+  
+  #island = st.selectbox('Island', ('Biscoe', 'Dream', 'Torgersen'))
+  #island = st.selectbox('Island', ('Biscoe', 'Dream', 'Torgersen'))
 
   
 
