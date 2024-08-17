@@ -29,6 +29,7 @@ with st.expander('Data Visualization'):
                horizontal=False, stack=None, width=None, height=None, use_container_width=True)
 
 
+
 # User Input
 with st.sidebar:
   st.header('Input Features')
@@ -59,7 +60,9 @@ with st.sidebar:
                                                'nissan',	'others',	'ram',	'subaru',	'toyota',	'volkswagen'
 ))
 
-
+# Filter car models based on the selected manufacturer
+filtered_models = vehicles_df[vehicles_df['manufacturer'] == selected_manufacturer]['car_model'].tolist()
+model = st.selectbox('Models', filtered_models)
 
 
 
