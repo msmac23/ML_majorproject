@@ -13,11 +13,11 @@ with st.expander('Data'):
   vehicles_df
 
   st.write('**X**')    # target variable
-  X_raw = vehicles_df.drop('price_rounded', axis =1)
+  X_raw = vehicles_df.drop('rounded_price', axis =1)
   X_raw
 
   st.write('**y**')   # predictor variables
-  y_raw = vehicles_df.price_rounded
+  y_raw = vehicles_df.rounded_price
   y_raw
 
 # Visualization Charts
