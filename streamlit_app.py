@@ -68,8 +68,10 @@ with st.sidebar:
   fuel = st.selectbox('Fuel Type', ('diesel',	'electric',	'gas',	'hybrid',	'other'))
   transmission = st.selectbox('Transmission Type', ('automatic',	'manual',	'other'))
   drive = st.selectbox('Drive Type', ('4wd',	'fwd',	'rwd'))
-  type = st.selectbox('Vehicle Type', ('bus',	'convertible',	'coupe',	'hatchback',	'mini-van',	'offroad',	'other',	'pickup',	'sedan',	'SUV',	'truck',	'van',	'wagon'))
-  odometer_bins = st.selectbox('Odometer', ('0-20k',	'50k-100k', '100k-150k',	'150k-200k',	'200k-300k',	'20k-50k',	'300k-400k',	'400k-500k',	'500k+'))
+  type = st.selectbox('Vehicle Type', ('bus',	'convertible',	'coupe',	'hatchback',	'mini-van',	'offroad',	
+                                       'other',	'pickup',	'sedan',	'SUV',	'truck',	'van',	'wagon'))
+  odometer_bins = st.selectbox('Odometer', ('0-20k',	'50k-100k', '100k-150k',	'150k-200k',	'200k-300k',	
+                                            '20k-50k',	'300k-400k',	'400k-500k',	'500k+'))
  
 
   
