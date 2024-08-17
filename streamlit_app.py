@@ -99,6 +99,9 @@ with st.expander('Input features'):
 encode = ['region', 'manufacturer', 'model', 'condition', 'fuel', 'transmission', 'drive', 'type', 'odometer_range']
 df_vehicles = pd.get_dummies(input_vehicles, columns=encode, prefix=encode)
 
+X = df_vehicles[1:]
+input_row = df_vehicles[:1]
+
 
 with st.expander('Data preparation'):
   st.write('**Encoded X (input vehicles)**')
@@ -106,8 +109,7 @@ with st.expander('Data preparation'):
   st.write('**y**')
   y
 
-#X = df_vehicles[1:]
-#input_row = df_vehicles[:1]
+
 
 
 
