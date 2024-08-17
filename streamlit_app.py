@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+import numpy as np
 
 st.title('🎈 Vehicle Prediction Algorithm')
 
@@ -109,7 +111,20 @@ with st.expander('Data preparation'):
   st.write('**y**')
   y
 
+# Model training and inference
+# training the ML model
+clf = RandomForestClassifier()
+clf.fit(X, y)
 
+# applying model to make predictions
+prediction = clf.predict(input_row)
+prediction_proba = clf.predict_proba(input_row)
+
+#df_prediction_proba = pd.DataFrame(prediction_proba)
+#df_prediction_proba.columns = ['Adelie', 'Chinstrap', 'Gentoo']
+#df_prediction_proba.rename(columns={0: 'Adelie',
+                                 1: 'Chinstrap',
+                                 2: 'Gentoo'})
 
 
 
