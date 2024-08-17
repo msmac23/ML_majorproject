@@ -13,12 +13,12 @@ with st.expander('Data'):
   vehicles_df
 
   st.write('**X**')    # target variable
-  X = vehicles_df.drop('price', axis =1)
-  X
+  X_raw = vehicles_df.drop('price', axis =1)
+  X_raw
 
   st.write('**y**')   # predictor variables
-  y = vehicles_df.price
-  y
+  y_raw = vehicles_df.price
+  y_raw
 
 # Visualization Charts
 
@@ -87,7 +87,7 @@ with st.sidebar:
           'odometer_bins': odometer_bins}
           
   input_df = pd.DataFrame(data, index=[0])
-  input_vehicles = pd.concat([input_df, X], axis=0)
+  input_vehicles = pd.concat([input_df, X_raw], axis=0)
 
 with st.expander('Input features'):
   st.write('**Input vehicle data**')
@@ -104,6 +104,8 @@ df_vehicles[:1]
 
 #X = df_vehicles[1:]
 #input_row = df_vehicles[:1]
+
+
 
 
 #input_vehicles - used to check 
