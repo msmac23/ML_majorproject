@@ -89,8 +89,16 @@ with st.sidebar:
   input_df = pd.DataFrame(data, index=[0])
   input_vehicles = pd.concat([input_df, X], axis=0)
 
+with st.expander('Input features'):
+  st.write('**Input vehicle data**')
+  input_df
+  st.write('**Merged vehicles data**')
+  input_vehicles
+
+
+
 #input_vehicles - used to check 
-input_df
+
 
  
 
