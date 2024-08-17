@@ -9,15 +9,15 @@ st.write('Good day Mr. Senior. Please see our attempt at a machine learning algo
 
 with st.expander('Data'):
   st.write('**Raw Vehicles Data**')
-  vehicles_df = pd.read_csv('https://raw.githubusercontent.com/msmac23/ML_majorproject/master/sample_vehicles_dataset.csv')
+  vehicles_df = pd.read_csv('https://raw.githubusercontent.com/msmac23/ML_majorproject/master/sample_vehicles_data.csv')
   vehicles_df
 
   st.write('**X**')    # target variable
-  X_raw = vehicles_df.drop('price', axis =1)
+  X_raw = vehicles_df.drop('price_rounded', axis =1)
   X_raw
 
   st.write('**y**')   # predictor variables
-  y_raw = vehicles_df.price
+  y_raw = vehicles_df.price_rounded
   y_raw
 
 # Visualization Charts
@@ -33,7 +33,7 @@ with st.expander('Data Visualization'):
 # User Input
 with st.sidebar:
   st.header('Input Features')
-  # region,price,year,manufacturer,model,condition,cylinders,fuel,transmission,drive,type,odometer_bins
+  
   # Define the regions for the selectbox
   regions = (
     'atlanta', 'austin', 'baltimore', 'boston', 'central NJ', 'charlotte',
@@ -48,9 +48,7 @@ with st.sidebar:
     'st louis, MO', 'stockton', 'tampa bay area', 'tucson', 'washington, DC'
   )
 
-  #bill_length_mm = st.slider('Bill length (mm)', 32.1, 59.6, 43.9)
   
-
   # Creating sliders and selectbox for each variable
   region = st.selectbox('Region', regions)
   year = st.slider('Year of Car', 1910, 2022, 1981) 
@@ -70,7 +68,7 @@ with st.sidebar:
   drive = st.selectbox('Drive Type', ('4wd',	'fwd',	'rwd'))
   type = st.selectbox('Vehicle Type', ('bus',	'convertible',	'coupe',	'hatchback',	'mini-van',	'offroad',	
                                        'other',	'pickup',	'sedan',	'SUV',	'truck',	'van',	'wagon'))
-  odometer_bins = st.selectbox('Odometer', ('0-20k',	'50k-100k', '100k-150k',	'150k-200k',	'200k-300k',	
+  odometer_range = st.selectbox('Odometer', ('0-20k',	'50k-100k', '100k-150k',	'150k-200k',	'200k-300k',	
                                             '20k-50k',	'300k-400k',	'400k-500k',	'500k+'))
 
   # Creating a DataFrame for the input features
@@ -84,7 +82,7 @@ with st.sidebar:
           'transmission': transmission,
           'drive': drive,
           'type': type,
-          'odometer_bins': odometer_bins}
+          'odometer_range': odometer_range}
           
   input_df = pd.DataFrame(data, index=[0])
   input_vehicles = pd.concat([input_df, X_raw], axis=0)
@@ -98,9 +96,9 @@ with st.expander('Input features'):
 
 # Data preparation
 # Encode categorical columns in X
-encode = ['region', 'manufacturer', 'model', 'condition', 'fuel', 'transmission', 'drive', 'type']
+encode = ['region', 'manufacturer', 'model', 'condition', 'fuel', 'transmission', 'drive', 'type', 'odometer_range']
 df_vehicles = pd.get_dummies(input_vehicles, columns=encode, prefix=encode)
-df_vehicles[:1]
+
 
 #X = df_vehicles[1:]
 #input_row = df_vehicles[:1]
