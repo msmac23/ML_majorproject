@@ -17,8 +17,8 @@ with st.expander('Data'):
   X_raw
 
   st.write('**y**')   # predictor variables
-  y_raw = vehicles_df.rounded_price
-  y_raw
+  y = vehicles_df.rounded_price
+  y
 
 # Visualization Charts
 
@@ -30,7 +30,7 @@ with st.expander('Data Visualization'):
 
 
 
-# User Input
+# Input Features
 with st.sidebar:
   st.header('Input Features')
   
@@ -99,6 +99,12 @@ with st.expander('Input features'):
 encode = ['region', 'manufacturer', 'model', 'condition', 'fuel', 'transmission', 'drive', 'type', 'odometer_range']
 df_vehicles = pd.get_dummies(input_vehicles, columns=encode, prefix=encode)
 
+
+with st.expander('Data preparation'):
+  st.write('**Encoded X (input vehicles)**')
+  input_row
+  st.write('**y**')
+  y
 
 #X = df_vehicles[1:]
 #input_row = df_vehicles[:1]
