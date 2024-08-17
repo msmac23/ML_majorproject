@@ -9,7 +9,7 @@ st.write('Good day Mr. Senior. Please see our attempt at a machine learning algo
 
 with st.expander('Data'):
   st.write('**Raw Vehicles Data**')
-  vehicles_df = pd.read_csv('https://raw.githubusercontent.com/msmac23/ML_majorproject/master/sample_vehicles_data.csv')
+  vehicles_df = pd.read_csv('https://raw.githubusercontent.com/msmac23/ML_majorproject/master/sample_vehicles_dataset.csv')
   vehicles_df
 
   st.write('**X**')    # target variable
@@ -63,6 +63,8 @@ with st.sidebar:
   # Filter car models based on the selected manufacturer
   filtered_models = vehicles_df[vehicles_df['manufacturer'] == manufacturer]['model'].tolist()
   model = st.selectbox('Models', filtered_models)
+
+  
 
 
 
