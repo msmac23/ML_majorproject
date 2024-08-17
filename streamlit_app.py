@@ -100,11 +100,11 @@ encode = ['region', 'manufacturer', 'model', 'condition', 'fuel', 'transmission'
 df_vehicles = pd.get_dummies(input_vehicles, columns=encode, prefix=encode)
 
 
-with st.expander('Data preparation'):
-  st.write('**Encoded X (input vehicles)**')
-  input_row
-  st.write('**y**')
-  y
+#with st.expander('Data preparation'):
+ # st.write('**Encoded X (input vehicles)**')
+  #input_row
+  #st.write('**y**')
+  #y
 
 #X = df_vehicles[1:]
 #input_row = df_vehicles[:1]
