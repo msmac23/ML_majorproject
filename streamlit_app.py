@@ -100,9 +100,10 @@ with st.expander('Input features'):
 # Encode categorical columns in X
 encode = ['region', 'manufacturer', 'model', 'condition', 'fuel', 'transmission', 'drive', 'type']
 df_vehicles = pd.get_dummies(input_vehicles, columns=encode, prefix=encode)
+df_penguins[:1]
 
-X = df_vehicles[1:]
-input_row = df_vehicles[:1]
+#X = df_vehicles[1:]
+#input_row = df_vehicles[:1]
 
 
 #input_vehicles - used to check 
