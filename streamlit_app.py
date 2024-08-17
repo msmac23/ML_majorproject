@@ -98,11 +98,11 @@ with st.expander('Input features'):
 
 # Data preparation
 # Encode categorical columns in X
-#encode = ['region', 'manufacturer', 'model', 'condition', 'fuel', 'transmission', 'drive', 'type']
-#df_vehicles = pd.get_dummies(input_vehicles, prefix=encode)
-
 encode = ['region', 'manufacturer', 'model', 'condition', 'fuel', 'transmission', 'drive', 'type']
 df_vehicles = pd.get_dummies(input_vehicles, columns=encode, prefix=encode)
+
+X = df_vehicles[1:]
+input_row = df_vehicles[:1]
 
 
 #input_vehicles - used to check 
