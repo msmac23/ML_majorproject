@@ -147,15 +147,26 @@ vehicles_rounded_price = np.array([3000, 4000,	5000,	6000,	7000,	8000,	9000,	100
                           40000,	41000,	42000,	43000,	44000,	45000,	46000,	47000,	48000,	49000,	50000,	51000,	
                           52000,	53000,	54000,	55000,	56000,	57000,	58000])
 
+# Assuming 'prediction' is an integer index value
+prediction_index = int(prediction[0]) 
 
-st.success(int(vehicle_rounded_price[prediction][0]))
+# Display the success message with the predicted price
+st.success(str(vehicles_rounded_price[prediction_index]))
+
+
+
+#st.success(int(vehicles_rounded_price[prediction][0]))
 #st.success(str(vehicle_rounded_price[int(prediction[0])]))
 
 
 #input_vehicles - used to check 
 
 
- 
+ #vehicles_rounded_price = np.array(['3000', '4000,	5000,	6000,	7000,	8000,	9000,	10000, 11000,	12000,	13000,	14000,	15000,
+ #                         16000,	17000,	18000,	19000,	20000,	21000,	22000,	23000,	24000,	25000,	26000,	27000,
+  #                        28000,	29000,	30000,	31000,	32000,	33000,	34000,	35000,	36000,	37000,	38000,	39000,
+   #                       40000,	41000,	42000,	43000,	44000,	45000,	46000,	47000,	48000,	49000,	50000,	51000,	
+    #                      52000,	53000,	54000,	55000,	56000,	57000,	58000])
 
   # region,price,year,manufacturer,model,condition,cylinders,fuel,transmission,drive,type,odometer_bins
 
