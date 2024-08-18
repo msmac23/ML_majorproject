@@ -146,7 +146,8 @@ vehicle_rounded_price = np.array([3000, 4000,	5000,	6000,	7000,	8000,	9000,	1000
                                28000,	29000,	30000,	31000,	32000,	33000,	34000,	35000,	36000,	37000,	38000,	39000,
                                40000,	41000,	42000,	43000,	44000,	45000,	46000,	47000,	48000,	49000,	50000,	51000,	
                                52000,	53000,	54000,	55000,	56000,	57000,	58000])
-st.success(str(vehicle_rounded_price[prediction][0]))
+#st.success(str(vehicle_rounded_price[prediction][0]))
+st.success(str(vehicle_rounded_price[int(prediction[0])]))
 
 #input_vehicles - used to check 
 
