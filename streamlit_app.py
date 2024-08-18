@@ -147,8 +147,10 @@ vehicles_rounded_price = np.array([3000, 4000,	5000,	6000,	7000,	8000,	9000,	100
                           40000,	41000,	42000,	43000,	44000,	45000,	46000,	47000,	48000,	49000,	50000,	51000,	
                           52000,	53000,	54000,	55000,	56000,	57000,	58000])
 
+
+
 # Assuming 'prediction' is an integer index value
-#prediction_index = int(prediction[0]) 
+prediction_index = int(prediction[0]) 
 
 # Display the success message with the predicted price
 st.success(str(vehicles_rounded_price[prediction_index]))
