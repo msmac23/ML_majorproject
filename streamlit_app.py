@@ -11,7 +11,7 @@ st.write('Good day Mr. Senior. Please see our attempt at a machine learning algo
 
 with st.expander('Data'):
   st.write('**Raw Vehicles Data**')
-  vehicles_df = pd.read_csv('https://raw.githubusercontent.com/msmac23/ML_majorproject/master/sample_vehicles_data.csv')
+  vehicles_df = pd.read_csv('https://raw.githubusercontent.com/msmac23/ML_majorproject/master/sample_vehicles_data_final.csv')
   vehicles_df
 
   st.write('**X**')    # target variable
@@ -36,24 +36,9 @@ with st.expander('Data Visualization'):
 with st.sidebar:
   st.header('Input Features')
   
-  # Define the regions for the selectbox
-  regions = (
-    'atlanta', 'austin', 'baltimore', 'boston', 'central NJ', 'charlotte',
-    'chicago', 'cincinnati', 'colorado springs', 'columbus', 'dallas / fort worth',
-    'denver', 'des moines', 'detroit metro', 'ft myers / SW florida', 'grand rapids',
-    'houston', 'inland empire', 'jacksonville', 'kansas city', 'las vegas',
-    'long island', 'los angeles', 'milwaukee', 'minneapolis / st paul', 'nashville',
-    'new york city', 'north jersey', 'oklahoma city', 'orange county', 'orlando',
-    'others', 'phoenix', 'pittsburgh', 'portland', 'raleigh / durham / CH',
-    'reno / tahoe', 'rochester', 'sacramento', 'san diego', 'seattle-tacoma',
-    'SF bay area', 'south florida', 'south jersey', 'spokane / coeur d\'alene',
-    'st louis, MO', 'stockton', 'tampa bay area', 'tucson', 'washington, DC'
-  )
 
-  
-  # Creating sliders and selectbox for each variable
-  region = st.selectbox('Region', regions)
   year = st.slider('Year of Car', 1910, 2022, 1981) 
+  
   manufacturer = st.selectbox('Manufacturer', ('acura',	'audi', 'bmw',	'cadillac',	'chevrolet',	'chrysler',	'dodge',	
                                                'ford',	'gmc',	'honda',	'hyundai',	'jeep',	'kia',	'lexus',	'mercedes-benz',	
                                                'nissan',	'others',	'ram',	'subaru',	'toyota',	'volkswagen'
@@ -64,18 +49,27 @@ with st.sidebar:
   model = st.selectbox('Models', filtered_models)
   
   condition = st.selectbox('Condition', ('excellent', 'fair',	'good',	'like new',	'new',	'salvage'))
+  
   cylinders = st.slider('Cylinder', 0, 12, 6) 
+  
   fuel = st.selectbox('Fuel Type', ('diesel',	'electric',	'gas',	'hybrid',	'other'))
+  
   transmission = st.selectbox('Transmission Type', ('automatic',	'manual',	'other'))
+  
   drive = st.selectbox('Drive Type', ('4wd',	'fwd',	'rwd'))
+  
   type = st.selectbox('Vehicle Type', ('bus',	'convertible',	'coupe',	'hatchback',	'mini-van',	'offroad',	
                                        'other',	'pickup',	'sedan',	'SUV',	'truck',	'van',	'wagon'))
+  
+  state = st.selectbox('State', ('ak',	'al',	'ar',	'az',	'ca',	'co',	'ct',	'dc',	'de',	'fl',	'ga',	'hi',	'ia',	'id',	'il',	
+                       'in',	'ks',	'ky',	'la',	'ma',	'md',	'me',	'mi',	'mn',	'mo',	'ms',	'mt',	'nc',	'nd',	'ne',	'nh',	'nj',	
+                        'nm', 'nv',	'ny',	'oh',	'ok',	'or',	'pa',	'ri',	'sc',	'sd',	'tn',	'tx',	'ut',	'va',	'vt',	'wa',	'wi',	'wv',	'wy'))
+
   odometer_range = st.selectbox('Odometer', ('0-20k',	'50k-100k', '100k-150k',	'150k-200k',	'200k-300k',	
                                             '20k-50k',	'300k-400k',	'400k-500k',	'500k+'))
 
   # Creating a DataFrame for the input features
-  data = {'region': region,
-          'year': year,
+  data = {'year': year,
           'manufacturer': manufacturer,
           'model': model,
           'condition': condition,
@@ -84,6 +78,7 @@ with st.sidebar:
           'transmission': transmission,
           'drive': drive,
           'type': type,
+          'state': state,
           'odometer_range': odometer_range}
           
   input_df = pd.DataFrame(data, index=[0])
@@ -98,7 +93,7 @@ with st.expander('Input features'):
 
 # Data preparation
 # Encode categorical columns in X
-encode = ['region', 'manufacturer', 'model', 'condition', 'fuel', 'transmission', 'drive', 'type', 'odometer_range']
+encode = ['manufacturer', 'model', 'condition', 'fuel', 'transmission', 'drive', 'type', 'state', 'odometer_range']
 df_vehicles = pd.get_dummies(input_vehicles, columns=encode, prefix=encode)
 
 X = df_vehicles[1:]
