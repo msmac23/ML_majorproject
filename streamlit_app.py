@@ -147,12 +147,8 @@ vehicles_rounded_price = np.array([3000, 4000,	5000,	6000,	7000,	8000,	9000,	100
                           40000,	41000,	42000,	43000,	44000,	45000,	46000,	47000,	48000,	49000,	50000,	51000,	
                           52000,	53000,	54000,	55000,	56000,	57000,	58000])
 
-if vehicles_rounded_price.empty:
-    st.warning("No data available for the selected prediction.")
-else:
-    st.success(str(vehicle_rounded_price[prediction][0]))
 
-#st.success(str(vehicle_rounded_price[prediction][0]))
+st.success(str(vehicle_rounded_price[prediction][0]))
 #st.success(str(vehicle_rounded_price[int(prediction[0])]))
 
 
