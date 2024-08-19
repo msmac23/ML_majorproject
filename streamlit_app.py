@@ -1,3 +1,7 @@
+# Robyn McDougall 20231887
+# Machine Learning and Data Science: Final Project Summer 2024
+
+
 import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
