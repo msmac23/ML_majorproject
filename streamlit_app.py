@@ -156,7 +156,7 @@ prediction_index = int(prediction[0])  # Adjust as needed if prediction is not a
 #else:
  #   st.error("Prediction index is out of bounds.")
 
-st.success(str(vehicles_rounded_price[prediction][0])) #THIS SECTION OF CODE DOES NOT WORK!!!
+st.success(str(vehicles_rounded_price[prediction][0]))
 #df_prediction_proba
 
 
