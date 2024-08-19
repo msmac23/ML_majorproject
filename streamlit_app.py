@@ -134,9 +134,6 @@ df_prediction_proba.rename(columns={0:3000, 1:4000, 2:5000,	3:6000,	4:7000,	5:80
 st.subheader('Predicted Rounded Price')
 
 
-# EVERYTHING WORKS UP TO HERE!!!!!
-
-
 vehicles_rounded_price = np.array(['3000', '4000', '5000', '6000', '7000', '8000', '9000', '10000', '11000', '12000',
                                    '13000', '14000', '15000', '16000', '17000', '18000', '19000', '20000', '21000', 
                                    '22000', '23000', '24000', '25000', '26000', '27000', '28000', '29000', '30000', 
@@ -158,15 +155,5 @@ prediction_index = int(prediction[0])  # Adjust as needed if prediction is not a
 
 st.success(str(vehicles_rounded_price[prediction][0]))
 #df_prediction_proba
-
-
-
-
-
-
-
-
-
-
 
 
