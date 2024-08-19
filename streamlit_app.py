@@ -141,19 +141,12 @@ vehicles_rounded_price = np.array(['3000', '4000', '5000', '6000', '7000', '8000
                                    '40000', '41000', '42000', '43000', '44000', '45000', '46000', '47000', '48000', 
                                    '49000', '50000', '51000', '52000', '53000'])
 
-#vehicles_rounded_price = np.array([0,	1,	2,	3,	4,	5,	6,	7,	8,	9,	10,	11,	12,	13,	14,	15,	16,	17,	18,	19,	20,	21,	22,	23,	24,	25,	26,	27,	28,
- #                                  29,	30,	31,	32,	33,	34,	35,	36,	37,	38,	39,	40,	41,	42,	43,	44,	45,	46,	47,	48,	49,	50])
 
 # Assuming 'prediction' is an integer index value
 prediction_index = int(prediction[0])  # Adjust as needed if prediction is not a list/array
 
-# Check if prediction_index is within the valid range of indices
-#if 0 <= prediction_index < len(vehicles_rounded_price):
- #   st.success(str(vehicles_rounded_price[prediction_index]))
-#else:
- #   st.error("Prediction index is out of bounds.")
 
 st.success(str(vehicles_rounded_price[prediction][0]))
-#df_prediction_proba
+
 
 
