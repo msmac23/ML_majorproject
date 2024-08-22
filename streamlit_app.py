@@ -11,7 +11,7 @@ st.title('🎈 Vehicle Prediction Algorithm')
 
 st.info('This is a Machine learning app to predict the prices of used cars on craigslist')
 
-st.write('Good day Mr. Senior. Please see my attempt at a machine learning algorithm app.')
+st.write('ROBYN MCDOUGALL   20231887.')
 
 with st.expander('Data'):
   st.write('**Raw Vehicles Data**')
