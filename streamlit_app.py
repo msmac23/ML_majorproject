@@ -143,7 +143,7 @@ st.subheader('Predicted Rounded Price')
   #                                 40000, 41000, 42000, 43000, 44000, 45000, 46000, 47000, 48000, 49000, 50000, 51000, 52000, 53000])
 
 
-vehicles_rounded_price = np.array([
+#vehicles_rounded_price = np.array([
 
 # Assuming 'prediction' is an integer index value
 #prediction_index = int(prediction[0])  # Adjust as needed if prediction is not a list/array
