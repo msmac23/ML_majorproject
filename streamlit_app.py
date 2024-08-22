@@ -147,7 +147,7 @@ vehicles_rounded_price = np.array(['3000', '4000', '5000', '6000', '7000', '8000
 
 
 # Assuming 'prediction' is an integer index value
-prediction_index = int(prediction[0])  # Adjust as needed if prediction is not a list/array
+#prediction_index = int(prediction[0])  # Adjust as needed if prediction is not a list/array
 
 
 st.success(str(vehicles_rounded_price[prediction][0]))
